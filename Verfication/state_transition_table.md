@@ -77,3 +77,12 @@ AVOIDING_OBSTACLE → NAVIGATING → DELIVERING
 | DELIVERING → RETURNING | Valid |
 | RETURNING → IDLE | Valid |
 | NAVIGATING → RETURNING | Valid |
+## Final Verification
+
+The state transition model was checked against the defined requirements.
+
+The model prevents the invalid transition IDLE → DELIVERING because a delivery request and navigation are required first.
+
+The model also prevents AVOIDING_OBSTACLE → DELIVERING because the robot must return to NAVIGATING after avoiding the obstacle.
+
+The transition AVOIDING_OBSTACLE → NAVIGATING is included so that the robot can continue its delivery journey after successfully avoiding an obstacle.
